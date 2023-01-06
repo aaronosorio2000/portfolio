@@ -48,7 +48,7 @@ const Contact = () => {
         <div
           ref={ref}
           className={`flex justify-center items-center ${
-            inView ? "animate-slideleft" : ""
+            inView ? "animate-slideleft" : " invisible"
           }`}
         >
           <form

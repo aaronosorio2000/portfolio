@@ -83,7 +83,9 @@ const Skills = () => {
                 src={src}
                 alt=""
                 ref={ref}
-                className={`w-20 mx-auto ${inView ? "animate-slowfade" : ""}`}
+                className={`w-20 mx-auto ${
+                  inView ? "animate-slowfade" : " invisible"
+                }`}
               />
               <p className="mt-4">{title}</p>
             </div>

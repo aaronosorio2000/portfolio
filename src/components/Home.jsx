@@ -14,8 +14,8 @@ const Home = () => {
       <div className=" max-w-screen-xl mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div
           ref={ref}
-          className={`flex flex-col justify-center h-full ${
-            inView ? "animate-slideleft" : ""
+          className={`flex flex-col justify-center h-full pt-20  ${
+            inView ? "animate-slideleft" : "invisible"
           }`}
         >
           <h2 className="text-5xl font-bold text-white font-tittle md:text-7xl">
@@ -46,7 +46,7 @@ const Home = () => {
             src={HeroImage}
             alt="Aaron 3d"
             ref={ref}
-            className={`mx-auto ${inView ? "animate-slowfade" : ""}`}
+            className={`mx-auto ${inView ? "animate-slowfade" : " invisible"}`}
           />
         </div>
       </div>

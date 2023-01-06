@@ -18,7 +18,7 @@ const About = () => {
             alt="Aaron 3d"
             ref={ref}
             className={`w-2/3 md:w-3/4 mx-auto ${
-              inView ? " animate-slideright" : ""
+              inView ? " animate-slideright" : " invisible"
             }`}
           />
         </div>
