@@ -38,8 +38,8 @@ const Portfolio = () => {
       title: "Portfolio",
       tech: "React/Tailwind",
       src: app4,
-      href: "https://luminous-panda-5ed6d5.netlify.app/",
-      code: "https://github.com/aaronosorio2000/babysafe",
+      href: "https://www.aaronosorio.com/",
+      code: "https://github.com/aaronosorio2000/portfolio",
     },
     {
       id: 5,
