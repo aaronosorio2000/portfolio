@@ -10,13 +10,13 @@ const Contact = () => {
       name="Contact"
       className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white "
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-xl mx-auto h-full">
-        <div className="pb-8">
+      <div className="flex flex-col p-4 justify-center max-w-screen-xl mx-auto h-full md:flex-row md:items-center">
+        <div className="pb-8 md:w-1/3">
           <h3 className="text-4xl font-bold font-tittle inline border-b-4 border-gray-500">
             Contact
           </h3>
-          <div>
-            <p className="py-6 text-justify">
+          <div className="">
+            <p className="py-6 text-justify md:text-xl">
               I'm a developer on the search of opportunities to work with great
               people and big projects. If you have any question or an offer let
               me know.
@@ -47,7 +47,7 @@ const Contact = () => {
         </div>
         <div
           ref={ref}
-          className={`flex justify-center items-center ${
+          className={`flex justify-center items-center md:w-2/3 ${
             inView ? "animate-slideleft" : " invisible"
           }`}
         >

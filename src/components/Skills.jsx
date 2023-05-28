@@ -87,7 +87,12 @@ const Skills = () => {
                   inView ? "animate-slowfade" : " invisible"
                 }`}
               />
-              <p className="mt-4">{title}</p>
+              <p
+                ref={ref}
+                className={`mt-4" ${inView ? "animate-slowfade" : "invisible"}`}
+              >
+                {title}
+              </p>
             </div>
           ))}
         </div>

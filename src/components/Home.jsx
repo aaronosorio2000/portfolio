@@ -2,30 +2,22 @@ import React from "react";
 import HeroImage from "../assets/img/logos/imghero.png";
 import { HiBriefcase } from "react-icons/hi";
 import { Link } from "react-scroll";
-import { useInView } from "react-intersection-observer";
+import { Canvas } from "@react-three/fiber";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 
 const Home = () => {
-  const { ref, inView } = useInView();
   return (
     <div
       name="Home"
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
       <div className=" max-w-screen-xl mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div
-          ref={ref}
-          className={`flex flex-col justify-center h-full pt-20  ${
-            inView ? "animate-slideleft" : "invisible"
-          }`}
-        >
+        <div className="flex flex-col justify-center my-12">
           <h2 className="text-5xl font-bold text-white font-tittle md:text-7xl">
-            I'm a Software Engineer
+            Frontend Developer
           </h2>
-          <p className="text-justify text-gray-200 py-4 md:text-xl">
-            I am constantly researching and learning and I don't think I'll ever
-            stop, I like to bring ideas to real life through the code. I love to
-            work on web application using technologies like React, Tailwind,
-            Express, Flask, MySQL.
+          <p className="text-justify text-gray-200 py-4 text-xl md:text-3xl">
+            I enjoy to bring ideas to real life through the code.
           </p>
           <div>
             <Link
@@ -41,12 +33,24 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div>
+        <div className="flex items-center justify-center relative w-screen h-2/5 md:w-2/3 md:h-2/3">
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={(3, 2, 1)} />
+            <Sphere args={[1, 100, 200]} scale={2.5}>
+              <MeshDistortMaterial
+                color="#ADD8E6"
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
           <img
             src={HeroImage}
             alt="Aaron 3d"
-            ref={ref}
-            className={`mx-auto ${inView ? "animate-slowfade" : " invisible"}`}
+            className="animate-hero absolute"
           />
         </div>
       </div>
