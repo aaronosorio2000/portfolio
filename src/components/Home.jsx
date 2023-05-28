@@ -17,7 +17,7 @@ const Home = () => {
             Frontend Developer
           </h2>
           <p className="text-justify text-gray-200 py-4 text-xl md:text-3xl">
-            I enjoy to bring ideas to real life through the code.
+            I enjoy bringing ideas to life through code.
           </p>
           <div>
             <Link
